@@ -1,0 +1,175 @@
+/*
+ Theme Name:   fukasawa Child
+ Theme URI:    http://shilan.github.eu/fukasawa-child/
+ Description:  fukasawa Child Theme
+ Author:       Shilan Kalhor
+ Author URI:   http://watercolor-sisters.com
+ Template:     fukasawa
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  fukasawachild
+*/
+/** Post Singular **/
+.custom_field.price {
+    color: rgb(235, 129, 43);
+}
+.price label, .size label{
+    color: rgb(141, 141, 141);
+}
+.price {
+    font-weight: bold;
+}
+
+
+/** left sidebar animation in width larger than 1000 **/
+.sidebar:before {
+    background-color: #f2f2f2;
+}
+.sidebar {
+    position: absolute;
+    left: -280px;
+    width: 280px;
+    -webkit-animation: slide 1s forwards ease-out;
+    -webkit-animation-delay: 0.5s;
+    animation: slide 1s forwards ease-out;
+    animation-delay: 0.5s;
+    background-color: #fff;
+}
+
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+@media ( max-width: 1000px ) {	
+	
+	.sidebar { 
+		align-items: center;
+		background: #fff;
+		border-bottom: 1px solid #ddd;
+		display: flex;
+		justify-content: space-between;
+		font-size: 1em;
+		margin: 0;
+		padding: 30px 5%;
+		position: relative;
+        width: 100%;
+        animation: none;
+        left: 0;
+	}
+	
+    .sidebar:before { content: none; }
+}
+
+@media ( max-width: 600px ) {
+
+	
+    .sidebar { 
+        padding: 20px 5%;
+        animation: none;
+        left: 0px;
+     }
+}
+
+/** singular (post) **/
+.post-nav-prev .post-nav-next {
+    color: yellow;
+}
+
+/** Fade in Posts **/
+.fade-in-image {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+  
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+/** overlay div with 3 actions: next, previous and expand **/
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.lg-actions .lg-next, .lg-actions .lg-prev, .lg-actions .lg-expand {
+    background-color: rgba(0,0,0,.45);
+    border-radius: 2px;
+    color: #999;
+    display: block;
+    font-size: 22px;
+    margin-top: -10px;
+    padding: 8px 10px 9px;
+    position: absolute;
+    top: 50%;
+    z-index: 1080;
+}
+
+.lg-actions .lg-prev {
+    left: 20px;
+}
+
+.lg-actions .lg-next {
+    right: 20px;    
+}
+
+.lg-actions .lg-expand {
+    right: 20px;
+    top: 20px;
+}
+
+.lg-icon {
+    font-family: lg;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.lg-icon a {
+    color: #999;
+}
